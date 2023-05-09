@@ -1,3 +1,0 @@
-C:/dev/Game-ideas/build/CMakeFiles/Game-ideas.dir
-C:/dev/Game-ideas/build/CMakeFiles/edit_cache.dir
-C:/dev/Game-ideas/build/CMakeFiles/rebuild_cache.dir
