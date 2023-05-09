@@ -13,6 +13,8 @@ using std::endl;
 
 int main() {
 	int a = 1;
+    int b=8;
+    cout<<"test:"<<b<<endl;
     //cout << dye::aqua("test: ") << a << endl;
     cout << "test: " << a << endl;
 	std::this_thread::sleep_for (std::chrono::seconds(5));
