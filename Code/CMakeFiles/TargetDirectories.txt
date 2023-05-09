@@ -1,0 +1,3 @@
+/workspaces/Game-ideas/Code/CMakeFiles/Code.dir
+/workspaces/Game-ideas/Code/CMakeFiles/edit_cache.dir
+/workspaces/Game-ideas/Code/CMakeFiles/rebuild_cache.dir
