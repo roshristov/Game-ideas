@@ -5,8 +5,6 @@
 //#include "C:\\dev\\Game-ideas\\color-console\\include\color.hpp"	//can't get it to work.
 //using namespace dye;
 //using namespace hue;
-#include <thread>
-#include <chrono>
 using std::cin;
 using std::cout;
 using std::endl;
