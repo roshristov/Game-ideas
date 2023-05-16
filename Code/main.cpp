@@ -1,10 +1,5 @@
-#include <iostream>
-//#include <iomanip>
-//#include <bits/stdc++.h>
-//using namespace std;
-//#include "C:\\dev\\Game-ideas\\color-console\\include\color.hpp"	//can't get it to work.
-//using namespace dye;
-//using namespace hue;
+#include <iostream> 
+
 using std::cin;
 using std::cout;
 using std::endl;
