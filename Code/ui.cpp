@@ -1,9 +1,9 @@
 #include <ostream>
 #include "ui.h"
-// using std::cout;
-// using std::endl;
+using namespace std;
 
-UserInterface::Interface(std::ostream &cout, char &text) {
-    text = "---test---";
+
+char UserInterface::Interface(std::ostream &cout, char &text) {
+   string text = "---test---";
     cout << text << endl;
 }
