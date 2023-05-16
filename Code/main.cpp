@@ -5,8 +5,6 @@
 //#include "C:\\dev\\Game-ideas\\color-console\\include\color.hpp"	//can't get it to work.
 //using namespace dye;
 //using namespace hue;
-#include <thread>
-#include <chrono>
 using std::cin;
 using std::cout;
 using std::endl;
@@ -15,6 +13,8 @@ int main() {
 	int a = 1;
     //cout << dye::aqua("test: ") << a << endl;
     cout << "test: " << a << endl;
-	std::this_thread::sleep_for (std::chrono::seconds(5));
+    // UserInterface interface;
+    // char text;
+    // interface.Interface(cout, text);
     return 0;
 }
