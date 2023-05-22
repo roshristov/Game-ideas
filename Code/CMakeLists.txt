@@ -7,4 +7,4 @@ set(CMAKE_CXX_STANDARD 14)
 set(SOURCE_FILES main.cpp)
 
 
-add_executable(Code main.cpp)
+add_executable(Code main.cpp ui.cpp ui.h)
