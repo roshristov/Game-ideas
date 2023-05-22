@@ -1,4 +1,3 @@
-#include <ostream>
 #include <iostream> 
 #include "ui.h"
 using std::endl;
@@ -36,8 +35,6 @@ char UserInterface::Interface(std::ostream &cout, char& text) {
             cout << "Invalid choice. Please try again." << endl;
             break;
     }
-
-    return text; 
 
     return 0;
 }
