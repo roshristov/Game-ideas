@@ -1,18 +1,33 @@
 #include <iostream> 
-
 using std::cin;
 using std::cout;
 using std::endl;
 #include "ui.h"
+#include "dice.h" 
+#include "text.h"
 
 int main() {
-	int a = 1;
-    int b=8;
-    cout<<"test:"<<b<<endl;
-    //cout << dye::aqua("test: ") << a << endl;
-    cout << "test: " << a << endl;
-    UserInterface interface;
-    char text;
+    UserInterface interface;  
+    char text; 
     interface.Interface(cout, text);
+
+    //example on how to use 'rollDice'
+    int sides = 6;
+    Dice dice;
+    cout << dice.rollDice(sides) << endl;
+
+    //after selecting the heroes.
+    Text story;
+    int order = 1;
+    story.Story(order);
+    order++;
+
+    //example of a shop
+    char sort = "shop";
+    story.Interactions(sort);   //doesn't work.
+
+    //after some encounters
+    story.Story(order);
+    order++;
 	return 0;
 }
