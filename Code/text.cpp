@@ -31,24 +31,25 @@ void Text::Story(int& order) {
     return;
 }
 
-char Text::Interactions(char& sort) {
+void Text::Interactions(int& sort) {
     //will have the shop dialogue, enemy confrontations and more if needed.
 
+    //1 - shop; 2 - enemy; 3 - adventurer
     switch (sort) {
-        case shop:  //doesn't work unfortunately, can't figure it out.
+        case 1:
             cout << "test11" << endl;
             //The shop saying hello to you.
 
             //should have the function to sell items. when it is done, it will be placed in here.
             break;
-        case enemy:
+        case 2:
             cout << "test22" << endl;
             //The ambush of the enemy.
 
             //should have the battle system called here. if there is time available, a 'negotiation' section will be available, where 
             //you don't fight the enemy.
             break;
-        case traveler:
+        case 3:
             //The encounter of a traveler while you travel from place to place. It is random if you enqounter them or not.
 
             //can either become a 'shop', where you can buy some stuff, or an enemy, where you have to fight them.
@@ -58,5 +59,5 @@ char Text::Interactions(char& sort) {
             break;
     }
 
-    return 0;
+    return;
 }

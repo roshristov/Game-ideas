@@ -1,11 +1,10 @@
 #pragma once
-#include <string.h>
 
 class Text {
 public:
     void Story(int& order);
-    char Interactions(char& sort);
+    void Interactions(int& sort);
 private:
     int order;
-    char sort;  //the sort of interaction (enemy, shop, whatever else)
+    int sort;  //the sort of interaction (enemy, shop, whatever else)
 };
