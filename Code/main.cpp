@@ -23,8 +23,12 @@ int main() {
     order++;
 
     //example of a shop
-    char sort = "shop";
-    story.Interactions(sort);   //doesn't work.
+    int sort = 1; // 1 is for shop
+    story.Interactions(sort);
+
+    //example of an enemy
+    sort = 2; // 2 is for enemy
+    story.Interactions(sort);
 
     //after some encounters
     story.Story(order);
