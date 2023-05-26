@@ -1,4 +1,6 @@
-    
+    #pragma once
+    #include "items.h"
+
     //here are the items that will be in the game. 
     //explanation:
     //the money system is with coins.   1 silver(sp) = 10 copper(cp)
@@ -17,6 +19,44 @@
     //an example:
     //your standart AC is 10 - your dexterity, so in this case, 2. you also have armor with AC at 12. in the end, you end up with -4.
     //with that formula, the number is 6. the enemy rolls 1d20 and gets 8 and they miss. if they got 6 or lower, they would've hit.
+
+    std::string weapon::getName (){
+        return name;
+
+    }
+    int weapon::getPrice (){
+        return price;
+
+    }
+    
+    int weapon::getWeight(){
+        return weight;
+    
+    }
+    
+    std::string weapon::getDamage(){
+    return damage;
+
+    }
+
+// define weapons and their arguments
+weapon::weapon(const std::string& name, int price, int weight, const std::string& damage)
+    : name(name), price(price), weight(weight), damage(damage) {}
+
+
+weapon greataxe("Greataxe", 30, 7, "1d12");
+weapon handaxe("Handaxe", 5, 2, "1d6");
+
+//define inventory (the backpack that holds 30 pounds of gear; its arguments)
+
+storage::storage(std::string name, int cost, int weight, const std::string &Sp_power)
+ : name(name), price(price), weight(weight), Sp_power(Sp_power) {}
+
+ //define the object
+ storage backpack("Backpack", 2, 5, "holds up to 30 pounds of gear");
+
+
+
 
     //Greataxe: -   -   -   cost - 30 gp;   weight - 7 lbs;     damage - 1d12;  
     //Handaxe:  -   -   -   cost - 5 gp;    weight - 2 lbs;     damage - 1d6;
