@@ -1,5 +1,5 @@
-#pragma once
 #include "items.h"
+#include "dice.h"
 
 // here are the items that will be in the game.
 // explanation:
@@ -19,6 +19,10 @@
 // an example:
 // your standart AC is 10 - your dexterity, so in this case, 2. you also have armor with AC at 12. in the end, you end up with -4.
 // with that formula, the number is 6. the enemy rolls 1d20 and gets 8 and they miss. if they got 6 or lower, they would've hit.
+
+std::string Item::getName() {
+    return name;
+}
 
 std::string weapon::getName()
 {
@@ -79,7 +83,7 @@ armor::armor(std::string name, int price, int weight, int defence)
 
 //armor objects
 armor Shield("Shield", 10, 6, 2);
-armor Chain Mail("Chain Mail", 75, 55, 16);
+armor ChainMail("Chain Mail", 75, 55, 16);
 
 
 //bed functions
@@ -97,7 +101,7 @@ int Bed::getWeight()
     return weight;
 }
 
-string Bed::getspecial()
+std::string Bed::getspecial()
 {
     return special;
 }
@@ -106,7 +110,7 @@ Bed::Bed(std::string name, int price, int weight, const std::string special)
     : name(name), price(price), weight(weight), special(special) {}
 
 //creating bed object
-    Bed bed("Bedroll",1,7,"helps you sleep in the wild");
+    Bed bed("Bedroll", 1, 7, "helps you sleep in the wild");
 
 
 std::string Crossbow::getName()
@@ -133,18 +137,20 @@ std::string Crossbow::getDamage()
 }
 
 
-Crossbow::Crossbow(std::string name, int price, int weight,std::string damage,std::string special)
-: name(name), price(price), weight(weight),damage(damage), special(special) {}
+Crossbow::Crossbow(std::string name, int price, int weight, std::string damage, std::string special)
+: name(name), price(price), weight(weight), damage(damage), special(special) {}
 
-Crossbow light("Light Crossbow",25,5,"1d8");
-Crossbow Bolt ("Crossbow bolt",1, 1 1/2); //add the special. how you want to implement it
+// Dice dice;
+// dice.rollDice(8);    the damage should be with the dice file. i tried to implement it, but it keeps breaking.
+Crossbow light("Light Crossbow", 25, 5, "1d8", "needs bolts to function");
+Crossbow Bolt ("Crossbow bolt", 1, 1, "null", "depletes by one everytime the crossbow is used"); //the special value isn't how it should be. it is like that so that there is no error.
 
 
 
 
 // added grataxe, handaxe and the backpack
 
-//added- Bedroll:  -   -   -   cost - 1 gp;    weight - 7 lbs;                         special - helps you sleep in the wild;
+//added- Bedroll:-   -   cost - 1 gp;    weight - 7 lbs;                         special - helps you sleep in the wild;
 // Tinderbox:    -   -   cost - 5 sp;    weight - 1 lb;                          special - can light a torch;
 // Torch:    -   -   -   cost - 1 cp;    weight - 1 lb;      damage - 1 fire;    special - brings bright light in a 20-foot radius;
 // Rations(1 day):   -   cost - 5 sp;    weight - 2 lbs;                         special - makes extended travel possible without sleeping in an inn or a house;

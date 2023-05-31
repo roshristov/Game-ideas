@@ -1,5 +1,13 @@
 #pragma once
 #include <string>
+
+class Item {
+public:
+    std::string getName();
+private:
+    std::string name;
+};
+
 class weapon
 {
 private:
@@ -10,7 +18,7 @@ private:
 
 public:
     weapon(const std::string &name, int price, int weight, const std::string &damage);
-    std::string getName() ;
+    std::string getName();
     int getPrice();
     int getWeight();
     std::string getDamage();
@@ -27,7 +35,7 @@ private:
 public:
     storage(const std::string name, int cost, int weight, const std::string &Sp_power);
     std::string getName() const;
-    int getCost() ;
+    int getCost();
     int getWeight() const;
     std::string getSp_power() const;
 };
@@ -62,7 +70,7 @@ public:
     Bed(std::string name, int price, int weight, const std::string special);
     std::string getName();
     int getPrice();
-    int getWeight() const;
+    int getWeight();
     std::string getspecial();
 
 };
@@ -70,7 +78,7 @@ public:
 class Crossbow{
 
 private:
-std::string name;
+    std::string name;
     int price;
     int weight;
     std::string special;
@@ -84,4 +92,4 @@ public:
     std::string getspecial();
     std::string getDamage();
 
-}
+};

@@ -33,7 +33,7 @@ CreatureStats getRandomCreatureStats() {
         // Add more creatures 
     };
 
-  
+    int index;
     return creatures[index];
 }
 //implement the set value that can be randomized for variance; don't know how to make it random value
