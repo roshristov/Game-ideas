@@ -139,10 +139,34 @@ Crossbow::Crossbow(std::string name, int price, int weight,std::string damage,st
 Crossbow light("Light Crossbow",25,5,"1d8");
 Crossbow Bolt ("Crossbow bolt",1, 1 1/2); //add the special. how you want to implement it
 
+Javelin::Javelin(std::string name, int price,int weight,std::string damage)
+   : name(name), price(price), weight(weight), damage(damage) {}
+
+   std::string Javelin::getName()
+{
+    return name;
+}
+int Javelin::getPrice()
+{
+    return price;
+}
+
+int Javelin::getWeight()
+{
+    return weight;
+}
 
 
+std::string Javelin::getDamage()
+{
+    return damage;
+}
 
-// added grataxe, handaxe and the backpack
+
+Javelin Javelin("Javelin",5,2,"1d6");
+
+
+// added greataxe, handaxe and the backpack
 
 //added- Bedroll:  -   -   -   cost - 1 gp;    weight - 7 lbs;                         special - helps you sleep in the wild;
 // Tinderbox:    -   -   cost - 5 sp;    weight - 1 lb;                          special - can light a torch;
