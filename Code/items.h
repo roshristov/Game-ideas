@@ -85,3 +85,22 @@ public:
     std::string getDamage();
 
 }
+
+
+class Javelin(){
+
+private:
+    std::string name;
+    int price;
+    int weight;
+    std::string damage;
+public:
+
+    Javelin(std::string name, int price,int weight,std::string damage );
+    std::string getName();
+    int getPrice();
+    int getWeight() const;
+       std::string getDamage();
+
+   
+}
