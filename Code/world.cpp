@@ -66,12 +66,12 @@ void World::visitDungeon() {
 
 void World::buyStuff() {
     std::cout << "You have entered the shop." << std::endl;
-    // Implement shop logic here
+    buyStuff();
 }
 
 void World::fightEnemies() {
     std::cout << "You encounter a group of enemies!" << std::endl;
-    // Implement battle logic here
+    fightEnemies();
 }
 
 int main() {
