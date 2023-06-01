@@ -109,3 +109,18 @@ public:
     int getWeight();
     std::string getDamage(); 
 };
+
+class Mace{
+private:
+    std::string name;
+    int price;
+    int weight;
+  
+public:
+    Mace(std::string name, int price, int weight);
+    std::string getName();
+    int getPrice();
+    int getWeight();
+    
+};
+
