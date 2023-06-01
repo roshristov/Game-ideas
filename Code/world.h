@@ -9,6 +9,10 @@ public:
     bool isValidOption(int choice);
     void promptInvalidOption();
     void handleChoice(int choice);
+    void visitVillage();
+    void visitDungeon();
+    void buyStuff();
+    void fightEnemies();
 };
 
 #endif

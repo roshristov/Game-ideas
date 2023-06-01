@@ -169,7 +169,30 @@ std::string Javelin::getDamage()
 }
 
 
-Javelin Javelin("Javelin", 5, 2, "1d6");
+Javelin javelin("Javelin", 5, 2, "1d6");
+
+
+
+std::string Mace::getName()
+{
+    return name;
+}
+int Mace::getPrice()
+{
+    return price;
+}
+
+int Mace::getWeight()
+{
+    return weight;
+}
+
+
+
+Mace::Mace(std::string name, int price,int weight)
+   : name(name), price(price), weight(weight) {}
+
+    Mace mace("Mace", 5, 4);
 
 
 // added greataxe, handaxe and the backpack
