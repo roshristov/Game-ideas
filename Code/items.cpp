@@ -169,7 +169,7 @@ std::string Javelin::getDamage()
 }
 
 
-Javelin Javelin("Javelin", 5, 2, "1d6");
+Javelin javelin("Javelin", 5, 2, "1d6");
 
 
 // added greataxe, handaxe and the backpack
