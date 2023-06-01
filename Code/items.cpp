@@ -192,9 +192,7 @@ int Mace::getWeight()
 Mace::Mace(std::string name, int price,int weight)
    : name(name), price(price), weight(weight) {}
 
-
-
-Mace mace("Mace", 5, 4);
+    Mace mace("Mace", 5, 4);
 
 
 // added greataxe, handaxe and the backpack
