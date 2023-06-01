@@ -24,17 +24,54 @@ void World::promptInvalidOption() {
 void World::handleChoice(int choice) {
     switch (choice) {
         case 1:
-            std::cout << "You are going to the village." << std::endl;
-            // Add village logic here
+            visitVillage();
             break;
         case 2:
-            std::cout << "You are going to the dungeon." << std::endl;
-            // Add dungeon logic here
+            visitDungeon();
             break;
         default:
             std::cout << "Invalid choice." << std::endl;
             break;
     }
+}
+
+void World::visitVillage() {
+    std::cout << "You have arrived at the village." << std::endl;
+    std::cout << "What would you like to do?" << std::endl;
+    std::cout << "1. Buy stuff" << std::endl;
+    std::cout << "2. Go back" << std::endl;
+
+    int choice;
+    std::cout << "Enter your choice: ";
+    std::cin >> choice;
+
+    switch (choice) {
+        case 1:
+            buyStuff();
+            break;
+        case 2:
+            std::cout << "You leave the village." << std::endl;
+            break;
+        default:
+            std::cout << "Invalid choice." << std::endl;
+            break;
+    }
+}
+
+void World::visitDungeon() {
+    std::cout << "You have entered the dungeon." << std::endl;
+    std::cout << "Prepare for battle!" << std::endl;
+    fightEnemies();
+}
+
+void World::buyStuff() {
+    std::cout << "You have entered the shop." << std::endl;
+    // Implement shop logic here
+}
+
+void World::fightEnemies() {
+    std::cout << "You encounter a group of enemies!" << std::endl;
+    // Implement battle logic here
 }
 
 int main() {
@@ -56,8 +93,6 @@ int main() {
 
     return 0;
 }
-
-
 
 //what can happen at these locations (at the village, you can buy stuff; at the dungeon, you fight enemies).
 //the shops can be implemented thanks to the items file having a good base, but the combat will have to wait a little so that i
