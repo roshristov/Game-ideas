@@ -14,14 +14,14 @@ private:
     std::string name;
     int price;
     int weight;
-    std::string damage;
+    
 
 public:
-    weapon(const std::string &name, int price, int weight, const std::string &damage);
+    weapon(const std::string &name, int price, int weight);
     std::string getName();
     int getPrice();
     int getWeight();
-    std::string getDamage();
+    
 };
 
 class storage
@@ -82,15 +82,15 @@ private:
     int price;
     int weight;
     std::string special;
-    std::string damage;
+   
 
 public:
-    Crossbow(std::string name, int price, int weight, std::string damage, std::string special);
+    Crossbow(std::string name, int price, int weight, std::string special);
     std::string getName();
     int getPrice();
     int getWeight();
     std::string getspecial();
-    std::string getDamage();
+   
 
 };
 
@@ -101,13 +101,13 @@ private:
     std::string name;
     int price;
     int weight;
-    std::string damage;
+    
 public:
-    Javelin(std::string name, int price, int weight, std::string damage);
+    Javelin(std::string name, int price, int weight);
     std::string getName();
     int getPrice();
     int getWeight();
-    std::string getDamage(); 
+    
 };
 
 class Mace{

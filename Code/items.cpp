@@ -38,17 +38,14 @@ int weapon::getWeight()
     return weight;
 }
 
-std::string weapon::getDamage()
-{
-    return damage;
-}
+
 
 // define weapons and their arguments
-weapon::weapon(const std::string &name, int price, int weight, const std::string &damage)
-    : name(name), price(price), weight(weight), damage(damage) {}
+weapon::weapon(const std::string &name, int price, int weight)
+    : name(name), price(price), weight(weight) {}
 
-weapon greataxe("Greataxe", 30, 7, "1d12");
-weapon handaxe("Handaxe", 5, 2, "1d6");
+weapon greataxe("Greataxe", 30, 7);
+weapon handaxe("Handaxe", 5, 2);
 
 // define inventory (the backpack that holds 30 pounds of gear; its arguments)
 
@@ -131,22 +128,19 @@ std::string Crossbow::getspecial()
 {
     return special;
 }
-std::string Crossbow::getDamage()
-{
-    return damage;
-}
 
 
-Crossbow::Crossbow(std::string name, int price, int weight, std::string damage, std::string special)
-: name(name), price(price), weight(weight), damage(damage), special(special) {}
+
+Crossbow::Crossbow(std::string name, int price, int weight, std::string special)
+: name(name), price(price), weight(weight), special(special) {}
 
 // Dice dice;
 // dice.rollDice(8);    the damage should be with the dice file. i tried to implement it, but it keeps breaking.
-Crossbow light("Light Crossbow", 25, 5, "1d8", "needs bolts to function");
-Crossbow Bolt ("Crossbow bolt", 1, 1, "null", "depletes by one everytime the crossbow is used"); //the special value isn't how it should be. it is like that so that there is no error.
+Crossbow light("Light Crossbow", 25, 5,  "needs bolts to function");
+Crossbow Bolt ("Crossbow bolt", 1, 1, "depletes by one everytime the crossbow is used"); //the special value isn't how it should be. it is like that so that there is no error.
 
-Javelin::Javelin(std::string name, int price,int weight,std::string damage)
-   : name(name), price(price), weight(weight), damage(damage) {}
+Javelin::Javelin(std::string name, int price,int weight)
+   : name(name), price(price), weight(weight) {}
 
    std::string Javelin::getName()
 {
@@ -163,13 +157,8 @@ int Javelin::getWeight()
 }
 
 
-std::string Javelin::getDamage()
-{
-    return damage;
-}
 
-
-Javelin javelin("Javelin", 5, 2, "1d6");
+Javelin javelin("Javelin", 5, 2);
 
 
 
