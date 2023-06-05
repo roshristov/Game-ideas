@@ -5,16 +5,24 @@ using std::endl;
 #include "ui.h"
 #include "dice.h" 
 #include "text.h"
+#include "character.h"
 
 int main() {
-    UserInterface interface;  
-    char text; 
-    interface.Interface(cout, text);
+    try {
+        UserInterface interface;  
+        interface.Interface(cout);
+    } catch (const std::exception& e) {
+        cout << "Exiting game..." << e.what() << endl;
+        return 0;
+    }
 
     //example on how to use 'rollDice'
     int sides = 6;
     Dice dice;
     cout << dice.rollDice(sides) << endl;
+
+    Character character;
+    character.Creation();
 
     //after selecting the heroes.
     Text story;
