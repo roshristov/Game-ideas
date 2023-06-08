@@ -12,21 +12,34 @@ void Character::Creation() {
     Character classes;
     Character races;
     Character stats;
+
     for (int i = 0; i < 3; i++) {
+        beginningClass:
         cout << "Write the number of the class that you want your character to be out of the ones listed below." << endl;
         cout << "1. Barbarian." << endl;
         cout << "2. Cleric." << endl;
         cout << "3. Paladin." << endl;
         cin >> classs;
-        classes.Classes(classs);
+        if (classs != 1 && classs != 2 && classs !=3) {
+            cout << "Invalid option. Please try again." << endl;
+            goto beginningClass;    //i know i shouldn't use goto, i'm just too tired to figure out a better way to do this.
+        } else {
+            classes.Classes(classs);
+        }
 
+        beginningRace:
         cout << "Write the number of the race that you want your character to be." << endl;
         cout << "1. Human." << endl;
         cout << "2. Elf." << endl;
         cout << "3. Gnome." << endl;
         cout << "4. Dragonborn." << endl;
         cin >> race;
-        races.Races(race);
+        if (race != 1 && race != 2 && race != 3 && race != 4) {
+            cout << "Invalid option. Please try again." << endl;
+            goto beginningRace;     //again, too tired to figure it out. at least it works.
+        } else {
+            races.Races(race);
+        }
 
         cout << "These are your stats:" << endl;
         stats.StatCreation();
@@ -37,7 +50,6 @@ void Character::Creation() {
 
     //there is a carrying capacity, which is the strength score multiplyed by 15.
     //an example: stregth score = 13; 13 * 15 = 195. you can carry 195 pounds of stuff.
-    return;
 }
 
 vector<int> Character::classStatsClass(0);  //initialization of the static data.
@@ -45,6 +57,7 @@ int Character::index = 0;
 vector<int> Character::stats1(0);
 vector<int> Character::stats2(0);
 vector<int> Character::stats3(0);
+int Character::classs = 0;
 
 void Character::StatCreation() {
 
@@ -60,6 +73,19 @@ void Character::StatCreation() {
             cout << stats1[i] << "; ";
         }
         cout << endl << "Strength; Dexterity; Constitution; Inteligence; Wisdom; Charisma;" << endl << endl;
+        //carying capacity:
+        stats1.push_back(stats1.at(0) * 15);
+
+        //hp (health points):
+        //12 plus 2 for barbarian; 8 plus 2 for cleric; 10 plus 2 for paladin. (the 'plus _' changes depending on the
+        //constitution level, but for now, we don't have to worry about that)
+        if(classs == 1) {   //barbarian
+            stats1.push_back(14);
+        } else if(classs == 2) {    //cleric
+            stats1.push_back(10);
+        } else if(classs == 3) {    //paladin
+            stats1.push_back(12);
+        } 
         classStatsClass.clear();
     }
 
@@ -75,6 +101,19 @@ void Character::StatCreation() {
             cout << stats2[i] << "; ";
         }
         cout << endl << "Strength; Dexterity; Constitution; Inteligence; Wisdom; Charisma;" << endl << endl;
+        //carying capacity:
+        stats2.push_back(stats2.at(0) * 15);
+
+        //hp (health points):
+        //12 plus 2 for barbarian; 8 plus 2 for cleric; 10 plus 2 for paladin. (the 'plus _' changes depending on the
+        //constitution level, but for now, we don't have to worry about that)
+        if(classs == 1) {   //barbarian
+            stats2.push_back(14);
+        } else if(classs == 2) {    //cleric
+            stats2.push_back(10);
+        } else if(classs == 3) {    //paladin
+            stats2.push_back(12);
+        } 
         classStatsClass.clear();
     }
 
@@ -90,9 +129,21 @@ void Character::StatCreation() {
             cout << stats3[i] << "; ";
         }
         cout << endl << "Strength; Dexterity; Constitution; Inteligence; Wisdom; Charisma;" << endl << endl;
+        //carying capacity:
+        stats3.push_back(stats3.at(0) * 15);
+
+        //hp (health points):
+        //12 plus 2 for barbarian; 8 plus 2 for cleric; 10 plus 2 for paladin. (the 'plus _' changes depending on the
+        //constitution level, but for now, we don't have to worry about that)
+        if(classs == 1) {   //barbarian
+            stats3.push_back(14);
+        } else if(classs == 2) {    //cleric
+            stats3.push_back(10);
+        } else if(classs == 3) {    //paladin
+            stats3.push_back(12);
+        } 
         classStatsClass.clear();
     }
-    return;
 }
 
 void Character::Classes(int& classs) {
@@ -144,7 +195,6 @@ void Character::Classes(int& classs) {
     }
 
     //there can be more classes, but for now, these are the most necesary to have.
-    return;
 }
 
 void Character::Races(int& race) {
@@ -184,8 +234,6 @@ void Character::Races(int& race) {
             cout << "Invalid race." << endl;
             break;
     }
-
-    return;
 }
 
 void Character::Spells() {
@@ -198,6 +246,4 @@ void Character::Spells() {
 
     //paladin
     //Cure Wounds = heals 1d8 amount of health.
-
-    return;
 }

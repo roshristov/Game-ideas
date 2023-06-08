@@ -18,5 +18,5 @@ private:
     static vector<int> classStatsClass;       
     static int index;
     int race;
-    int classs;
+    static int classs;
 };
