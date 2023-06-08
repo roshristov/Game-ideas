@@ -5,12 +5,18 @@ using std::vector;
 
 class Character {
 public:
+    static vector<int> stats1;
+    static vector<int> stats2;
+    static vector<int> stats3;
+
     void Creation();
-    void Stats();
     void Spells();
-    vector<int> Classes(int& classs);
-    vector<int> Races(int& race);
+    void Classes(int& classs);
+    void Races(int& race);
+    void StatCreation();
 private:
-    string race;
-    string classs;
+    static vector<int> classStatsClass;       
+    static int index;
+    int race;
+    int classs;
 };
