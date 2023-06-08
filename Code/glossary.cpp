@@ -33,7 +33,8 @@ CreatureStats getRandomCreatureStats() {
         // Add more creatures 
     };
 
-    int index; //a quick fix. it should be changed to something else in the future.
-    return creatures[index];
+    int index = 3;
+    int result = std::rand() % index;
+    return creatures[result];
 }
 //implement the set value that can be randomized for variance; don't know how to make it random value

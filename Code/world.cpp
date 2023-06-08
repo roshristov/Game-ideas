@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "world.h"
+#include "battle.h"
 
 void World::showOptions() {
     std::cout << "Where do you want to go?" << std::endl;
@@ -71,7 +72,8 @@ void World::buyStuff() {
 
 void World::fightEnemies() {
     std::cout << "You encounter a group of enemies!" << std::endl;
-
+    Battles battle;
+    battle.Battle();
 }
 
 //what can happen at these locations (at the village, you can buy stuff; at the dungeon, you fight enemies).
