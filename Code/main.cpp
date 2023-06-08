@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <exception>
 using std::cin;
 using std::cout;
 using std::endl;
@@ -7,6 +8,7 @@ using std::endl;
 #include "text.h"
 #include "character.h"
 #include "world.h"
+
 
 int main() {
     try {

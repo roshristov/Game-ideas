@@ -1,10 +1,16 @@
 #include <iostream> 
 #include "ui.h"
+#include "color.hpp"
 using std::endl;
 using std::cout;
 using std::cin;
 
 
+int main()
+{
+    std::cout << dye::aqua("Hello, World!") << std::endl;
+    return 0;
+}
 void UserInterface::Interface() {
     cout << "--------------------------------------------------------D&D-Game--------------------------------------------------------" 
     << endl; // 120 characters to fit the top of the console.
