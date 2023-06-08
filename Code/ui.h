@@ -4,6 +4,6 @@
 
 class UserInterface {
 public:
-    void Interface(std::ostream &cout);
+    void Interface();
 private:
 };

@@ -5,14 +5,13 @@ using std::cout;
 using std::cin;
 
 
-void UserInterface::Interface(std::ostream &cout) {
+void UserInterface::Interface() {
     cout << "--------------------------------------------------------D&D-Game--------------------------------------------------------" 
     << endl; // 120 characters to fit the top of the console.
 
 // Main menu 
-    cout << "1. Start Game" << endl;
-    cout << "2. Exit" << endl;
-    cout << "Enter your choice: ";
+    cout << "Press any button to continue..." << endl;
+    cout << "Press 1 to exit." << endl;
 
     //user's choice
     int choice;
@@ -20,14 +19,11 @@ void UserInterface::Interface(std::ostream &cout) {
 
     switch (choice) {
         case 1:
-            // Start new game
-            break;
-        case 2:
             // Exit game
-            throw std::runtime_error("Exit");   //made for closing the program
+            throw std::runtime_error("Exiting game...");   //made for closing the program
             break;
         default:
-            cout << "Invalid choice. Please try again." << endl;
+            // will be empty. no need for the number to be correct.
             break;
     }
 

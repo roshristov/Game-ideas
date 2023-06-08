@@ -6,13 +6,14 @@ using std::endl;
 #include "dice.h" 
 #include "text.h"
 #include "character.h"
+#include "world.h"
 
 int main() {
     try {
         UserInterface interface;  
-        interface.Interface(cout);
+        interface.Interface();
     } catch (const std::exception& e) {
-        cout << "Exiting game..." << e.what() << endl;
+        cout << e.what() << endl;
         return 0;
     }
 
@@ -29,6 +30,22 @@ int main() {
     int order = 1;
     story.Story(order);
     order++;
+
+    World world;
+    int choice;
+
+    do {
+        world.showOptions();
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if (world.isValidOption(choice)) {
+            world.handleChoice(choice);
+            break;
+        } else {
+            world.promptInvalidOption();
+        }
+    } while (true);
 
     //example of a shop
     int sort = 1; // 1 is for shop

@@ -66,32 +66,12 @@ void World::visitDungeon() {
 
 void World::buyStuff() {
     std::cout << "You have entered the shop." << std::endl;
-    buyStuff();
+    
 }
 
 void World::fightEnemies() {
     std::cout << "You encounter a group of enemies!" << std::endl;
-    fightEnemies();
-}
 
-int main() {
-    World world;
-    int choice;
-
-    do {
-        world.showOptions();
-        std::cout << "Enter your choice: ";
-        std::cin >> choice;
-
-        if (world.isValidOption(choice)) {
-            world.handleChoice(choice);
-            break;
-        } else {
-            world.promptInvalidOption();
-        }
-    } while (true);
-
-    return 0;
 }
 
 //what can happen at these locations (at the village, you can buy stuff; at the dungeon, you fight enemies).
