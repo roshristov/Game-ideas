@@ -4,7 +4,7 @@
 
 class Dice {
 public:
-    int rollDice(int& sides);
+    int rollDice(int sides);
 private:
     int sides;
 };

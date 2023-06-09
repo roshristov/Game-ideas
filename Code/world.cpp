@@ -7,6 +7,7 @@
 #include <ctime>
 #include "world.h"
 #include "battle.h"
+#include "glossary.h"
 
 void World::showOptions() {
     std::cout << "Where do you want to go?" << std::endl;

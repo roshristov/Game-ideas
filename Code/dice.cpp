@@ -2,7 +2,7 @@
 #include "dice.h" 
 
 // rolling a single dice with 'sides' number of sides
-int Dice::rollDice(int& sides) {
+int Dice::rollDice(int sides) {
     // random number generator
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 

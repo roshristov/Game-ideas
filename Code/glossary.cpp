@@ -1,40 +1,91 @@
 #include <iostream>
 #include <vector>
 #include "glossary.h"
+#include "dice.h"
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
 
-CreatureStats::CreatureStats(const std::string& name, int health, int attack, int defense, const std::string& actions)
-    : name(name), health(health), attack(attack), defense(defense), actions(actions) {}
+struct CreatureStatss
+{
+    std::string name;
+    int health;
+    int attack;
+    int defense;
+    const std::string actions;
 
-std::string CreatureStats::getName() const {
+    std::string getName();
+    int getHealth();
+    int getAttack();
+    int getDefense();
+    std::string getActions();
+};
+
+std::string CreatureStatss::getName()
+{
     return name;
 }
-
-int CreatureStats::getHealth() const {
+int CreatureStatss::getHealth()
+{
     return health;
 }
-
-int CreatureStats::getAttack() const {
+int CreatureStatss::getAttack()
+{
     return attack;
 }
-
-int CreatureStats::getDefense() const {
+int CreatureStatss::getDefense()
+{
     return defense;
 }
-
-std::string CreatureStats::getActions() const {
+std::string CreatureStatss::getActions()
+{
     return actions;
 }
 
-CreatureStats getRandomCreatureStats() {
-    std::vector<CreatureStats> creatures{
-        CreatureStats("Goblin", 20, 5, 3, "Goblin Punch"),
-        CreatureStats("Orc", 30, 8, 5, "Orc Strike"),
-        CreatureStats("Dragon", 100, 15, 10, "Dragon Breath")
-        // Add more creatures 
-    };
+void CreatureStats::getRandomCreatureStats()
+{
 
-    int index = 3;
+    Dice dice;
+    std::string name;
+    std::string actions;
+    int health;
+    int attack;
+    int defense;
+
+    int index = 4;
     int result = std::rand() % index;
-    return creatures[result];
+
+    switch (result)
+    {
+    case 1:
+        name = "Dragon";
+        actions = "Breathe Fire";
+        health = 100;
+        attack = dice.rollDice(4);
+        defense = 30;
+        break;
+    case 2:
+        name = "orc";
+        actions = "orc strike";
+        health = 30;
+        attack = dice.rollDice(6);
+        defense = 5;
+        break;
+    case 3:
+        name = "Goblin";
+        actions = "Goblin Punch";
+        health = 20;
+        attack = dice.rollDice(4);
+        defense = 3;
+    default:
+        break;
+    }
+
+    std::cout << "Name: " << name << endl;
+    std::cout << "Health: " << health << std::endl;
+    std::cout << "Attack: " << attack << std::endl;
+    std::cout << "Defense: " << defense << std::endl;
+    std::cout << "Actions: " << actions << std::endl;
 }
-//implement the set value that can be randomized for variance; don't know how to make it random value
+// implement the set value that can be randomized for variance; don't know how to make it random value

@@ -9,7 +9,11 @@ using std::cout;
 
 void Battles::Battle() {
     Character character;
-    //CreatureStats creature;   //not working
+    CreatureStats creature;
+    creature.getRandomCreatureStats();
+
+    // system("COLOR 40");
+    // cout << "hello world" << endl;
 
     //checking if the stats can be accessed.
     for (int i = 0; i < character.stats1.size(); i++){
@@ -24,6 +28,4 @@ void Battles::Battle() {
         cout << character.stats3[i] << "; ";
     }
     cout << endl << endl;
-
-    //cout << creature.getRandomCreatureStats() << endl;    //not working
 }
