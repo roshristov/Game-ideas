@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-using std::string;
 using std::vector;
 
 class Character {
@@ -8,6 +7,9 @@ public:
     static vector<int> stats1;
     static vector<int> stats2;
     static vector<int> stats3;
+    static std::string name1;
+    static std::string name2;
+    static std::string name3;
 
     void Creation();
     void Spells();

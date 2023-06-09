@@ -1,17 +1,19 @@
-#ifndef INVENTORY_H
-#define INVENTORY_H
+// #ifndef INVENTORY_H
+// #define INVENTORY_H
 
-#include <vector>
-#include "items.h"
+// #include <vector>
+// using std::vector;
+// #include "items.h"
 
-class Inventory {
-public:
-    void addItem(Item* item);
-    void removeItem(Item* item);
-    void displayInventory();
+// class Inventory {
+// public:
+//     vector<CharacterInventory> inventory;
 
-private:
-    std::vector<Item*> items;
-};
+//     void displayInventory();
+//     bool isInInventory(std::vector<CharacterInventory> inventory, int itemID);
 
-#endif  // INVENTORY_H
+// private:
+//     // std::vector<Item*> items;
+// };
+
+// #endif  // INVENTORY_H

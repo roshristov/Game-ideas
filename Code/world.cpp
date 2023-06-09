@@ -70,9 +70,10 @@ void World::buyStuff() {
     std::cout << "You have entered the shop." << std::endl;
     
 }
+//the functions won't be used for now.
 
 void World::fightEnemies() {
-    std::cout << "You encounter a group of enemies!" << std::endl;
+    // std::cout << "You encounter a group of enemies!" << std::endl;
     Battles battle;
     battle.Battle();
 }

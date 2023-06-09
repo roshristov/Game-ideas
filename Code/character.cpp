@@ -1,5 +1,6 @@
 #include <iostream> 
 #include "character.h"
+#include "dice.h"
 #include <vector>
 using std::endl;
 using std::cin;
@@ -15,7 +16,7 @@ void Character::Creation() {
 
     for (int i = 0; i < 3; i++) {
         beginningClass:
-        cout << "Write the number of the class that you want your character to be out of the ones listed below." << endl;
+        cout << endl << "Write the number of the class that you want your character to be out of the ones listed below." << endl << endl;
         cout << "1. Barbarian." << endl;
         cout << "2. Cleric." << endl;
         cout << "3. Paladin." << endl;
@@ -28,7 +29,7 @@ void Character::Creation() {
         }
 
         beginningRace:
-        cout << "Write the number of the race that you want your character to be." << endl;
+        cout << endl << "Write the number of the race that you want your character to be." << endl << endl;
         cout << "1. Human." << endl;
         cout << "2. Elf." << endl;
         cout << "3. Gnome." << endl;
@@ -41,7 +42,7 @@ void Character::Creation() {
             races.Races(race);
         }
 
-        cout << "These are your stats:" << endl;
+        cout << endl << "These are your stats:" << endl;
         stats.StatCreation();
         index++;
     }
@@ -57,9 +58,13 @@ int Character::index = 0;
 vector<int> Character::stats1(0);
 vector<int> Character::stats2(0);
 vector<int> Character::stats3(0);
+std::string Character::name1;
+std::string Character::name2;
+std::string Character::name3;
 int Character::classs = 0;
 
 void Character::StatCreation() {
+    Dice dice;
 
     if (index == 0) {
         //stats1
@@ -86,6 +91,15 @@ void Character::StatCreation() {
         } else if(classs == 3) {    //paladin
             stats1.push_back(12);
         } 
+
+        //check of the name
+        if(classs == 1) {
+            name1 = "Barbarian";
+        } else if (classs==2) {
+            name1 = "Cleric";
+        } else if (classs == 3) {
+            name1 = "Paladin";
+        }
         classStatsClass.clear();
     }
 
@@ -114,6 +128,16 @@ void Character::StatCreation() {
         } else if(classs == 3) {    //paladin
             stats2.push_back(12);
         } 
+
+        //check of the name
+        if(classs == 1) {
+            name2 = "Barbarian";
+        } else if (classs==2) {
+            name2 = "Cleric";
+        } else if (classs == 3) {
+            name2 = "Paladin";
+        }
+        
         classStatsClass.clear();
     }
 
@@ -142,6 +166,15 @@ void Character::StatCreation() {
         } else if(classs == 3) {    //paladin
             stats3.push_back(12);
         } 
+
+        //check of the name
+        if(classs == 1) {
+            name3 = "Barbarian";
+        } else if (classs==2) {
+            name3 = "Cleric";
+        } else if (classs == 3) {
+            name3 = "Paladin";
+        }
         classStatsClass.clear();
     }
 }

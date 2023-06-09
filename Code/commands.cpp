@@ -1,19 +1,7 @@
 #include <iostream>
 #include "commands.h"
 
-void showInventory(const std::string& characterName) {
-    // inventory implementation
-    std::cout << "Showing inventory for character: " << characterName << std::endl;
-    
-}
-
-void showStats() {
-    // stats implementation
-    std::cout << "Showing stats of the characters" << std::endl;
-
-}
-
-void showHelp() {
+void showHelp() {   //won't be used for now.
     // show all available commands
     std::cout << "Available commands:\n"
               << "-inventory <character-name>: Show inventory for a specific character.\n"

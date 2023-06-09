@@ -7,9 +7,6 @@
 //                                   1 gold(gp) = 10 silver(sp);
 //                                   1 platinum(pp) = 10 gold(gp);
 
-// the damage is calculated by the amount of dice and the type of dice.
-// example: "1d6" means one 6 sided die. "2d10" means two 10 sided dice.
-
 // the defence is weirdly complicated, but this is how it works:
 // the character's "Armor Class" is 10 - the character's dexterity modifier. the lower, the better. armor and shields lower it even lower,
 // to the point where it can become negative.
@@ -20,6 +17,7 @@
 // your standart AC is 10 - your dexterity, so in this case, 2. you also have armor with AC at 12. in the end, you end up with -4.
 // with that formula, the number is 6. the enemy rolls 1d20 and gets 8 and they miss. if they got 6 or lower, they would've hit.
 
+//won't be used for now.
 std::string Item::getName() {
     return name;
 }
@@ -137,7 +135,7 @@ Crossbow::Crossbow(std::string name, int price, int weight, std::string special)
 // Dice dice;
 // dice.rollDice(8);    the damage should be with the dice file. i tried to implement it, but it keeps breaking.
 Crossbow light("Light Crossbow", 25, 5,  "needs bolts to function");
-Crossbow Bolt ("Crossbow bolt", 1, 1, "depletes by one everytime the crossbow is used"); //the special value isn't how it should be. it is like that so that there is no error.
+Crossbow Bolt ("Crossbow bolt", 1, 1, "depletes by one everytime the crossbow is used");
 
 Javelin::Javelin(std::string name, int price,int weight)
    : name(name), price(price), weight(weight) {}

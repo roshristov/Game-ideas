@@ -1,6 +1,7 @@
 #include <iostream>
 #include "interactions.h"
 
+//won't be used for now.
 void Interactions::displayShopClerk() {
     std::cout << "You see a friendly shop clerk." << std::endl;
     std::cout << "Clerk: Welcome to my shop! How can I assist you today?" << std::endl;

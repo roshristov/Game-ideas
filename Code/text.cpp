@@ -1,27 +1,32 @@
 #include <iostream> 
 #include "text.h"
+#include <thread>
+#include <chrono>
 using std::endl;
 using std::cout;
 
 void Text::Story(int& order) {
     //it will have a set amount, where it continues to the next until it is finished.
-    //I want there to be multuple story variations to be picked at random (different switch statements), I just don't
-    //know how to implement it.
 
     switch (order) {
         case 1:
-            cout << "test1" << endl;
-            //Intro text dump ("The princess has been captured. You have been selected by the king to find her." something like that)
+            cout << "You have been recruted by the king of the kingdom Ember Nest to find the princess." << endl;
+            cout << "He tells you all the details and you set off." << endl << endl;
             break;
         case 2:
-            cout << "test2" << endl;
-            //Development of the plot ("You found a perfume on the floor. It seems to belong to the princess. We are getting close.")
+            cout << "After defeating that foul beast, see a clue." << endl;
+            cout << "A note." << endl;
+            cout << "It says that 'the princess is in another dungeon'." << endl;
+            cout << "You know where you need to go, so you set off." << endl << endl;
+
             break;
         case 3:
-            //Near the end ("We know where they are keeping the princess. We just have to get there and save her.")
-            break;
-        case 4:
-            //The end credits ("The princess is saved! You have been awarded for your efforts. /n THE END")
+            cout << "After finishing off the monster, you see her." << endl;
+            cout << "The princess." << endl;
+            cout << "You release her and she thanks you for the help." << endl;
+            cout << "You return to the king to tell the good news." << endl;
+            cout << "As thanks, he awards you with countless riches." << endl << endl;
+            cout << "THE END" << endl;
             break;
         default:
             //will be empty
@@ -31,6 +36,7 @@ void Text::Story(int& order) {
     return;
 }
 
+//won't be used for now.
 void Text::Interactions(int& sort) {
     //will have the shop dialogue, enemy confrontations and more if needed.
 
